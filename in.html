@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T-Shirt Store</title>
+</head>
+<body>
+    <h1>Welcome to the T-Shirt Store</h1>
+    <form action="/checkout" method="post">
+        <h2>Items in Cart:</h2>
+        <label>
+            T-Shirt:
+            <input type="text" name="item" value="Cool T-Shirt">
+        </label><br>
+        <h2>Shipping Information:</h2>
+        <label>
+            Name:
+            <input type="text" name="name" required>
+        </label><br>
+        <label>
+            Address:
+            <input type="text" name="address" required>
+        </label><br>
+        <label>
+            Email:
+            <input type="email" name="email" required>
+        </label><br>
+        <button type="submit">Checkout</button>
+    </form>
+</body>
+</html>

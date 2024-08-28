@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="bda048fc-71a5-4d57-a377-f7e56f86e860">
+        <input type="hidden" name="subject" value="New Order">
+        <input type="hidden" name="redirect" value="YOUR_REDIRECT_URL">
+        
+        <h2>Items in Cart:</h2>
+        <label>
+            T-Shirt:
+            <input type="text" name="item" value="{{ request.form['item'] }}" readonly>
+        </label><br>
+        <h2>Shipping Information:</h2>
+        <label>
+            Name:
+            <input type="text" name="name" value="{{ request.form['name'] }}" readonly>
+        </label><br>
+        <label>
+            Address:
+            <input type="text" name="address" value="{{ request.form['address'] }}" readonly>
+        </label><br>
+        <label>
+            Email:
+            <input type="email" name="email" value="{{ request.form['email'] }}" readonly>
+        </label><br>
+        <button type="submit">Submit Order</button>
+    </form>
+</body>
+</html>
